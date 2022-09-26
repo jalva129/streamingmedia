@@ -1,0 +1,371 @@
+html{
+    background-color: #020659;
+    font-family: 'Optima', 'sans-serif';
+}
+
+body{
+    margin: 0 auto;
+    width:375px;
+}
+
+nav{
+    width: 375px;
+    background-color: #030ABC;
+    position: absolute;
+    top: 0;
+    
+    text-transform: uppercase;
+}
+
+nav h2{
+    visibility: hidden;
+    height: 1px;
+    margin: 0;
+}
+
+nav ul{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #2104D9;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+li a{
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+[href="#home"] {
+    text-transform: Capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    left: 90px;
+    padding: 16px 16px;
+}
+
+a:hover, input:hover{
+    background-color: #590242;
+}
+
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 28px;
+    position: relative;
+    user-select: none;
+}
+
+label span{
+    background-color: #FFFFFF;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+
+label span:before, label span:after{
+    background-color: #FFFFFF;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before{
+    top:5px;
+}
+
+label span:after{
+    top:-5px;
+}
+
+input{
+    display: none;
+}
+
+input:checked ~ ul{
+    max-height: 500px;
+}
+
+input:checked ~ label span{
+    background: transparent;
+}
+
+input:checked ~ label span:before{
+    transform: rotate(-45deg);
+}
+
+input:checked ~ label span:after{
+    transform: rotate(45deg);
+}
+
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after{
+    top: 0;
+}
+header{
+    background-image: linear-gradient(to bottom right, #2104D9, #000);
+    height: 210px;
+}
+
+
+header h1, header p{
+    color: #FFFFFF;
+    position: relative;
+    top: 65px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+
+
+h1, h2, h3 {
+    text-transform: uppercase;
+}
+
+main{
+
+    background-color: #FFFFFF;
+    color: #590242;
+}
+
+main h2{
+    margin: 0;
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+}
+
+.scroll{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+}
+
+.scroll section{
+    margin: 10px;
+    position: relative;
+}
+
+.scroll div{
+    position: absolute;
+    top: 251px;
+    background-color: rgba(255,255,255,.75);
+    padding: 5px;
+    height: 50px;
+    width: 350px;
+}
+.scroll h3{
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+dl{
+    display: flex;
+    margin-top: 0;
+}
+
+dt{
+    padding-right: 5px;
+    font-style: italic;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+}
+
+dd{
+    margin: 0;
+    text-transform: capitalize;
+    padding-left: 5px;
+}
+audio{
+    position: absolute;
+    bottom: 150px;
+    left: 5px;
+}
+
+.more{
+    text-decoration: none;
+    background-color: #590242;
+    color: #FFFFFF;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 20px 32px;
+    border-style: none;
+}
+
+.more:hover{
+    background-color: #020659;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-play-button {
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+audio::-webkit-media-controls-enclosure {
+    background: rgba(255,255,255,.5);
+}
+#trending ::-webkit-scrollbar {
+    width: 15px;
+}
+#trending ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 15px #590242;
+}
+#trending ::-webkit-scrollbar-thumb {
+    background: #590242;
+    border-radius: 5px;
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+    background: #020659;
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+    width: 15px;
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+    box-shadow: inset 0 0 15px #020659;
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+    background: #020659;
+    border-radius: 5px;
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF;
+}
+
+#yourplay{
+    background-color: rgb(4, 150, 217);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#playlists p{
+    margin-top: 0;
+}
+
+#yourplay section{
+    background-color: rgb(4, 96, 217);
+    padding: 10px;
+    border-radius: 5%;
+}
+
+
+#curatedplay{
+    background-color: rgb(3, 10, 188);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#curatedplay section{
+    background-color: rgb(4, 8, 121);
+    padding: 10px;
+    border-radius: 5%;
+}
+
+footer{
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Optima', 'sans-serif';
+}
+
+@media screen and (min-width: 834px){
+    body{
+        width: 834px;
+    }
+    nav{
+        width: 834px;
+    }
+    nav ul{
+        overflow: visible;
+        max-height: 66px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    label{
+        display: none;
+    }
+    li a{
+        padding-top: 10px;
+    }
+    [href="#home"]{
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    header{
+        height: 175px;
+    }
+    #trend{
+        position: relative;
+        right: -640px;
+    }
+    #playlists{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+  
+    #yourplay.scroll, #curatedplay.scroll{
+        grid-template-columns: 1fr;
+        height: 500px;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+    }
+    #yourplay.scroll section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    #yourplay.scroll h3{
+        padding-top: 20px;
+    }
+    #yourplay.scroll p{
+        grid-column-start: 2;
+    }
+    #yourplay.scroll img{
+        grid-row: 1 / 3;
+    }
+    #curatedplay.scroll section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+    #curatedplay.scroll p{
+        grid-column-start: 2;
+    }
+    #curatedplay.scroll img{
+        grid-row: 1 / 3;
+    }
+    #curatedplay.scroll h3{
+        padding-top: 20px;
+    }
+    #play, #curate{
+        position: relative;
+        right: -225px;
+    }
+}
